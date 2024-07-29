@@ -20,6 +20,7 @@ const PlatformIconList = ({ platforms} : Props) => {
         linux: FaLinux,
         ios: MdPhoneIphone,
         web: BsGlobe,
+        nintendo: SiNintendo
     }
 
     return (
