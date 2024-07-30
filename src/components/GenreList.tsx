@@ -6,7 +6,7 @@ import {
     ListItem,
     Image,
     Spinner,
-    Button, Heading
+    Button, Heading, Box
 } from "@chakra-ui/react";
 import getCroppedImageUrl from "../services/image-url";
 
@@ -21,8 +21,8 @@ const GenreList = ( { onSelectGenre, selectedGenre } : Props) => {
     if(isLoading) return <Spinner></Spinner>
 
     return (
-        <>
-            <Heading marginY={5 } fontSize='2xl' >Genres</Heading>
+        <Box marginLeft={3}>
+            <Heading marginY={5} fontSize='2xl' >Genres</Heading>
             <List>
                 {data.map(genre =>
                     <ListItem key={genre.id} paddingY='5px'>
@@ -32,7 +32,7 @@ const GenreList = ( { onSelectGenre, selectedGenre } : Props) => {
                         </HStack>
                 </ListItem>)}
             </List>
-        </>
+        </Box>
     )
 }
 export default GenreList
